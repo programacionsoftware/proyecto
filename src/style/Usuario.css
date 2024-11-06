@@ -1,0 +1,8 @@
+.usuario{
+
+    width: 500px;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,19 @@
+.ingresar{
+    background-color: #d38b0d;
+    width: 150px;
+    margin: 10px auto;
+    height: 50px;
+    border-radius: 25px;
+    color: #021709;
+    padding: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    border: 1px solid #d38b0d;
+    align-items: flex-end;
+}
+
+.ingresar:hover{
+    background-color: #021709;
+    color: #ffffff;
+}
