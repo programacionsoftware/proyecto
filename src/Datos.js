@@ -4,13 +4,10 @@ import DataTable from 'react-data-table-component';
 import axios from 'axios';
 import  './style/Reporte.css';
 
-const Reporte = () => {
+const Datos = () => {
     const [data, setData] = useState(
         []);
     const [loading, setLoading] = useState(true);
-
-  
-
 
     const columns = [
         {name: 'ID', selector: row => row.id_articulo, sortable: true},
@@ -21,7 +18,7 @@ const Reporte = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/reportes');
+                const response = await axios.get('http://localhost:5000/api/datos');
                 console.log('Datos recibidos:', response.data);
                 setData(response.data);
             }catch (e) {
@@ -32,6 +29,7 @@ const Reporte = () => {
         };
         fetchData();
     }, []);
+    
     return (
         <div>
             <h1 className='mainReport'>Datos Historicos</h1>
@@ -51,4 +49,4 @@ const Reporte = () => {
     );
 };
 
-export {Reporte};
+export {Datos};
