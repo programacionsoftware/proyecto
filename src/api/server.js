@@ -1,6 +1,8 @@
 const express = require('express');
 const { Pool } = require('pg');
 const cors  = require('cors');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 // configuracion de la conexion a postgreSQL
 
@@ -39,12 +41,12 @@ app.get('/api/stock', async (req, res) => {
 });
 ////////////////////////////////////////////////////////////////////////
 app.post('/registrar', async (req, res) => {
-    const { username, email, password, role } = req.body;
+    const { id_tipo_documento, identificacion, nombres, apellidos, genero, direccion, telefono, email, password } = req.body;
     try {
       const hashedPassword = await bcrypt.hash(password, 10);
-      const result = await pool.query(
-        'INSERT INTO users (username, email, password, role) VALUES ($1, $2, $3, $4) RETURNING id, username, email, role',
-        [username, email, hashedPassword, role || 'user']
+      const result = await conexion.query(
+        'INSERT INTO nodo_galapa.usuario (id_tipo_documento,identificacion,nombres,apellidos,genero,direccion,telefono email, password) VALUES ($1, $2, $3, $4. $5, $6, $7, $8, $9, $10) RETURNING  email ',
+        [email, hashedPassword || 'usuario']
       );
       res.status(201).json(result.rows[0]);
     } catch (err) {
@@ -56,7 +58,7 @@ app.post('/registrar', async (req, res) => {
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
     try {
-      const result = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+      const result = await conexion.query('SELECT * FROM nodo_galapa.usuario WHERE email = $9', [email]);
       const user = result.rows[0];
   
       if (!user || !(await bcrypt.compare(password, user.password))) {
@@ -90,7 +92,7 @@ const verifyToken = (req, res, next) => {
   };
 
  // / rutas protegidas
-  pp.get('/profile', verifyToken, (req, res) => {
+  app.get('/profile', verifyToken, (req, res) => {
     res.json({
       id: req.user.userId,
       role: req.user.role,

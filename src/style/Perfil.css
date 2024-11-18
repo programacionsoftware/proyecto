@@ -1,0 +1,54 @@
+/* Fondo de la página */
+body {
+    background-color: #f8f9fa; /* Fondo gris claro */
+  }
+  
+  /* Contenedor del perfil */
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Estilos de la tarjeta del perfil */
+  .profile-card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;  /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra para darle efecto de profundidad */
+    background-color: #ffffff;
+  }
+  
+  /* Título del perfil */
+  .card-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #343a40;  /* Color oscuro para el título */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de los párrafos dentro de la tarjeta */
+  .card-body p {
+    font-size: 18px;
+    color: #495057; /* Texto gris oscuro */
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo del texto de carga */
+  .loading {
+    text-align: center;
+    font-size: 20px;
+    color: #007bff;  /* Color azul para el texto de carga */
+  }
+  
+  /* Estilo para el mensaje de error o alerta */
+  .alert-error {
+    font-size: 14px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  

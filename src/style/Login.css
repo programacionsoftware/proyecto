@@ -1,0 +1,57 @@
+/* Fondo de la página para dar una apariencia atractiva */
+body {
+    background-color: #f0f2f5;  /* Color de fondo claro */
+  }
+  
+  /* Estilos del contenedor principal */
+  .container {
+    height: 100vh;  /* Asegura que el contenedor ocupe toda la pantalla */
+  }
+  
+  /* Estilos de la tarjeta */
+  .card {
+    border-radius: 8px;  /* Bordes redondeados para la tarjeta */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil para la tarjeta */
+  }
+  
+  /* Estilo del título */
+  .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Estilo para los campos del formulario */
+  input.form-control {
+    border-radius: 5px;  /* Bordes redondeados */
+    padding: 10px;  /* Más espacio en los inputs */
+  }
+  
+  /* Estilo para el botón */
+  button.btn-primary {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;  /* Color de fondo del botón */
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;  /* Suaviza la transición de color al pasar el ratón */
+  }
+  
+  /* Efecto hover para el botón */
+  button.btn-primary:hover {
+    background-color: #0056b3;  /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Estilo del mensaje de error */
+  .alert-danger {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para el formulario */
+  form {
+    margin-top: 20px;
+  }
+  
+  

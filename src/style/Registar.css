@@ -1,0 +1,60 @@
+/* Fondo de la página */
+body {
+    background-color: #f8f9fa;  /* Fondo gris claro */
+  }
+  
+  /* Contenedor principal (centrado vertical y horizontal) */
+  .container {
+    height: 100vh;  /* Ocupa toda la altura de la pantalla */
+  }
+  
+  /* Estilo para la tarjeta */
+  .card {
+    border-radius: 10px;  /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra ligera para la tarjeta */
+  }
+  
+  /* Título del formulario */
+  .card-body h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #343a40;  /* Color oscuro para el título */
+  }
+  
+  /* Estilo de los inputs */
+  .form-control {
+    border-radius: 5px;  /* Bordes redondeados */
+    padding: 10px;  /* Relleno adicional */
+    margin-bottom: 15px;  /* Espacio entre los campos */
+    border: 1px solid #ced4da;  /* Borde de los inputs */
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;  /* Color azul al enfocarse */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);  /* Sombra azul suave */
+  }
+  
+  /* Estilo para el botón */
+  .btn-primary {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;  /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Estilo para el mensaje de error */
+  .alert-danger {
+    font-size: 14px;
+    background-color: #f8d7da;  /* Fondo de error */
+    color: #721c24;  /* Color del texto */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  

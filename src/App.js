@@ -14,13 +14,12 @@ function App() {
   return (
     <div className= 'App'>
     <h1 className='Main'>SISTEMA DE INVENTARIO MOBID+D</h1>
-    <Datos />
-    <Stock />
+    
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/registrar" element={<Register />} />
-        <Route path="/perfil" element={<Profile />} />
+        <Route path="/registrar" element={<Registrar />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
     </Router>
      
@@ -30,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export  { App };

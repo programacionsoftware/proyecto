@@ -9,21 +9,25 @@ const Perfil = () => {
     if (!token) return;
 
     axios
-      .get('http://localhost:5000/perfil', {
+      .get('http://localhost:5000/profile', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => setProfile(response.data))
       .catch((error) => console.log(error));
   }, []);
 
-  return perfil ? (
-    <div>
-      <h2>Perfil</h2>
-      <p>ID: {profile.id}</p>
-      <p>Rol: {profile.role}</p>
+  return profile ? (
+    <div className="profile-container">
+      <div className="card profile-card">
+        <div className="card-body">
+          <h2 className="card-title text-center">Perfil de Usuario</h2>
+          <p><strong>ID:</strong> {profile.id}</p>
+          <p><strong>Rol:</strong> {profile.role}</p>
+        </div>
+      </div>
     </div>
   ) : (
-    <p>Cargando...</p>
+    <p className="loading">Cargando...</p>
   );
 };
 
